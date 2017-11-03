@@ -1,0 +1,22 @@
+<h1 id="post__title"><%= page.title %></h1>
+<div><span id="post__date"><%- date(page.date, null) %></span>
+<span id="post__author"><a href="/">fishedee</a></span>
+<% if(page.categories && page.categories.data.length != 0 ){%>
+<span id="post__category"><a href="/categories/<%= page.categories.data[0].name%>"><%= page.categories.data[0].name %></a></span>
+<% } %></div>
+<article id="post__content" data-identifier="<%= page.path %>-<%= page.title %>" data-url="<%= page.path %>" data-title="<%= page.title%>">
+  <%- page.content %>
+</article> <!-- end #post__content -->
+
+<div id="post__share">
+  <a id="icon-twitter" class="fontello" href="https://twitter.com/intent/tweet?url=http://<%= url %>&text=<%= page.title %>" target="_blank"></a>
+  <a id="icon-cc" class="fontello" href="http://creativecommons.org/licenses/by-nc-sa/3.0" target="_blank"></a>
+  <a id="icon-weibo" class="fontello" href="http://v.t.sina.com.cn/share/share.php?url=http://<%= url %>&title=<%= page.title %>" target="_blank"></a>
+</div> <!-- end #post__share -->
+
+<div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink" target="_blank">需要翻墙才能看到评论</a>
+</div> <!-- end #disqus_thread -->
+
+<p id="copyright">Powered by <a href="http://hexo.io" target="_blank">Hexo</a>&nbsp;&nbsp;|&nbsp;&nbsp;Theme <a href="https://github.com/fishedee/pantoy" target="_blank">pantoy</a></p>

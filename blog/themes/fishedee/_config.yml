@@ -1,0 +1,24 @@
+#基础信息
+title: fishedee的博客
+email: 306766045@qq.com
+url: fishedee.com
+avatar: http://image.fishedee.com/FulTCoakq411USQX_3HiZ79_fH0i
+description: 一个安静的程序猿
+
+#高亮配置
+highlight : my-github
+
+#评论配置
+disqus: fishedee
+
+#统计配置
+baidu: 0a6da8c751d798199236954c919fd59e
+
+#菜单
+menu:
+  首页: / 
+  前端: /categories/前端
+  后端: /categories/后端
+  理科: /categories/理科
+  经济: /categories/经济
+  生活: /categories/生活
