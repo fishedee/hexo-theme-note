@@ -1,6 +1,6 @@
 # hexo-theme-note
 
-学习笔记式的hexo主题，浏览[这里](fishedee.com)
+学习笔记式的hexo主题，浏览[这里](http://fishedee.com)
 
 # 功能
 
