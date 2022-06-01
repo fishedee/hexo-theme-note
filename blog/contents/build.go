@@ -313,7 +313,7 @@ func handleAllCategory(indexFile HandleFileInfo, data []HandleFileInfo) string {
 	lastDate := ""
 	lastDateIndex := 0
 	content += "\n# 分类\n\n"
-	QueryGroup(data, "Category Desc", func(singleCategory []HandleFileInfo) int {
+	QueryGroup(data, "Category", func(singleCategory []HandleFileInfo) int {
 		content += fmt.Sprintf("* [%v](/categories/%v)\n", singleCategory[0].Category, singleCategory[0].Category)
 		return 1
 	})
@@ -431,7 +431,7 @@ func handleDir(files []FileInfo) map[string]string {
 	allCategoryData := handleAllCategory(indexFile, handleFiles)
 	result["index.html"] = allCategoryData
 
-	QueryGroup(handleFiles, "Category desc", func(data []HandleFileInfo) int {
+	QueryGroup(handleFiles, "Category", func(data []HandleFileInfo) int {
 		categoryName := data[0].Category
 		categoryData := HandleSingleCategory(data)
 		result["categories/"+categoryName+"/index.html"] = categoryData
